@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+  body {
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    font-family: 'Open Sans', apple-system, sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Evita desplazamiento horizontal no deseado */
+    overflow-y: auto;   /* Permite desplazamiento vertical */
+    background-attachment: scroll; /* ✅ Permite desplazamiento */
+  }
+
+  .container{
+    margin-top: 50px;
+    
+  }
+
+  .box{
+    margin-top: 0px;
+    
+  }
+
+  .app {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+  }
+
+
+  /* 📌 FOOTER */
+  footer {
+    font-family: 'Open Sans', sans-serif;
+    bottom: 0; /* Lo fija en la parte inferior */
+    padding: 1rem;
+    text-align: center;
+    color: #FFFFFF;
+    left: 0;
+    width: 100%;
+  }
+
+  /* 📌 NOT FOUND PAGE */
+  .notFoundCover img {
+    display: block;
+    margin: auto;
+    width: 20%;
+  }
+
+  /* 📌 HOME BUTTON */
+  .homeBtn #btn-icon {
+    font-size: 8em; /* Aumenta el tamaño del ícono */
+  }
+
+  /* 📌 PROFILE IMAGE */
+  .profile-image {
+    width: 400px; 
+    height: 400px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+    float: left; 
+    margin-right: 20px; 
+  }
+
+  /* 📌 NAVBAR */
+  .custom-navbar {
+    position: fixed; /* ✅ Fija la navbar en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* Altura normal de la navbar */
+    background-color: rgba(0, 0, 0, 0.7); /* Transparente con un poco de color */
+    transition: all 0.3s ease-in-out; /* ✅ Suaviza el cambio de tamaño */
+    z-index: 1000;
+  }
+
+  .navbar-expanded {
+    height: 200px !important; /* ✅ Aumenta la altura cuando el menú está abierto */
+  }
+
+  /* 📌 Ajusta el contenido para que se empuje hacia abajo */
+  .appContent {
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 0px; /* ✅ Se empuja igual a la navbar */
+    transition: margin-top 0.3s ease-in-out; /* ✅ Suaviza el desplazamiento */
+    
+  }
+
+  .appContent.shifted {
+    margin-top: 20px !important; /* ✅ Se mueve cuando el menú está abierto */
+  }
+
+
+  /* 📌 Estilos de los enlaces */
+  .custom-navbar .nav-link {
+    font-family: 'Work Sans', sans-serif;
+    color: #00bfff !important; /* Color azul brillante */
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 15px;
+  }
+
+  /* 📌 Efecto Hover en los enlaces */
+  .custom-navbar .nav-link:hover {
+    color: #FFFFFF !important; /* Cambia a blanco en hover */
+  }
+
+/* 📌 Estilos de las tarjetas */
+.card {
+  font-family: 'Open Sans', sans-serif;
+  background-color: transparent !important;
+  color:#FFFFFF !important; 
+  border-radius: 15px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno */
+  margin: 15px auto; /* Espaciado entre tarjetas */
+  width: 90%; /* Ajuste de ancho */
+  max-width: 700px; /* Máximo ancho */
+  text-align: center; /* Centra el contenido */
+  backdrop-filter: blur(8px); /* Efecto de desenfoque en el fondo */
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Borde blanco suave */
+  transition: all 0.3s ease-in-out; /* Animación fluida */
+}
+
+/* 📌 Efecto Hover en las tarjetas */
+.card:hover {
+  transform: scale(1.05); /* Efecto de escala al pasar el mouse */
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* 📌 Estilo del título de la tarjeta */
+.card-title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.5rem; /* Tamaño del título */
+  font-weight: bold; /* Negrita */
+  color: #00bfff !important;
+  cursor: pointer; /* Cursor interactivo */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+}
+
+/* 📌 Contenido de la tarjeta (cuando está activo) */
+.card-content {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem; /* Tamaño del texto */
+  color: #ffffff; /* Texto blanco */
+  margin-top: 10px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+  border-radius: 8px;
+  opacity: 0.9;
+}
+
+/* 📌 Botón dentro de la tarjeta */
+.card-button {
+  font-family: 'Work Sans', sans-serif;
+  padding: 10px 20px !important; /* Ajusta el padding para que el tamaño sea similar */ 
+  font-size: 16px; /* Asegura que el texto tenga el mismo tamaño */
+  border-radius: 10px; /* Redondea los bordes para que coincida */
+  background-color: #00bfff; /* Asegura que el color sea el mismo */
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: auto !important; /* Evita que se expanda */
+  display: inline-block !important; /* Asegura que el tamaño sea relativo al contenido */
+  text-decoration: none
+}
+
+.card-button:hover {
+  background-color: #00bfff;
+
+}
+
+.testimonial {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+  padding: 40px;
+  border-radius: 10px;
+  width: 80%;
+  margin: auto;
+  display: block;
+  min-height: 250px; /* Asegurar altura */
+  opacity: 0.9;
+}
+
+
+/* Asegurar que el texto dentro de la testimonial se vea bien */
+.testimonial h3{
+  display: block;
+  color:#00bfff !important;
+}
+.testimonial p {
+  display: block;
+  color: #FFFFFF !important;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#hero-section h1{
+font-size: 4rem;
+}
+
+#hero-section p{
+  font-size: 2rem;
+  }
+
+  /* ✅ RESPONSIVE DESIGN */
+
+  /* 🖥️ Tablets (Ancho menor a 1024px) */
+  @media (max-width: 1024px) {
+    #hero-section {
+      padding: 2rem 5rem; /* Reduce padding en pantallas medianas */
+    }
+
+    .profile-image {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+
+
+  /* 📱 Móviles (Ancho menor a 768px) */
+  @media (max-width: 768px) {
+    #hero-section {
+      padding: 1rem 2rem;
+      text-align: center; /* Centra el texto */
+    }
+
+    #hero-section h1 {
+      font-size: 3vw; /* Escala dinámicamente el texto */
+    }
+
+    #hero-section p {
+      font-size: 1rem;
+    }
+
+    .profile-image {
+      width: 200px;
+      height: 200px;
+      float: none; /* Evita flotación en móviles */
+      display: block;
+      margin: 0 auto; /* Centra la imagen */
+    }
+
+    .custom-navbar {
+      flex-direction: column; /* Navbar apilada en móviles */
+      height: auto;
+    }
+
+    .custom-navbar .nav-link {
+      font-size: 1rem;
+      margin: 5px 0;
+    }
+  }
+
+  .logo {
+    width: 80px;
+  }
+
+
+  /* 📲 Móviles pequeños (Ancho menor a 480px) */
+  @media (max-width: 480px) {
+    #hero-section h1 {
+      font-size: 2rem; /* Reduce el tamaño del título */
+    }
+
+    #hero-section p {
+      font-size: 1rem;
+    }
+
+    .profile-image {
+      width: 150px;
+      height: 150px;
+    }
+
+    .custom-navbar {
+      padding: 5px; /* Reduce el padding en móviles pequeños */
+    }
+
+    .homeBtn {
+      width: 120px;
+      padding: 0.6rem;
+      font-size: 0.9rem;
+    }
+  }
+
+  .logo {
+    width: 60px;
+  }
+
+  .card-img-top{
+      height: 150px;  /* Altura fija */
+      object-fit: cover; /* Recorta la imagen para llenar el espacio sin distorsionarla */
+    }
+
+    .card-link{
+      color: #00bfff
+    }
+    
+
+
+  
+
