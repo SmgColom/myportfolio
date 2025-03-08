@@ -1,7 +1,0 @@
-# Ignorar node_modules y archivos de compilación
-node_modules/
-dist/
-build/
-.vscode/
-.DS_Store
-.env
