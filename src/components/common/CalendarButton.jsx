@@ -8,8 +8,7 @@ function CalendarButton() {
       <button 
         onClick={() => window.open(googleCalendarUrl, "_blank")} 
         className="card-button"
-      >
-        📅 <strong>Book Me</strong>
+      >📅 <strong>Book Me</strong>
       </button>
     </div>
   );

@@ -4,7 +4,7 @@ import "../styles/index.css";
 import { Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CarouselList from "../components/features/carousel/CarouselList";
-
+import ContactButton from '../components/common/ContactButton';
 
 
 function ProjectsPage() {
@@ -13,7 +13,12 @@ function ProjectsPage() {
       <h1>My Projects and Portfolio</h1>
       <CardsList />
       <CarouselList />
+      <div className="hero-section">
+      <p>Get a quote for your website today!</p>
+      </div>
+      <ContactButton></ContactButton>
     </Container>
+    
   )
 }
 

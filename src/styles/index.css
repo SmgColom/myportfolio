@@ -1,16 +1,111 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+body {
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-attachment: scroll;
+}
 
-  body {
-    font-family: 'Open Sans', sans-serif;
-    height: 100%;
-    font-family: 'Open Sans', apple-system, sans-serif;
-    box-sizing: border-box;
-    overflow-x: hidden; /* Evita desplazamiento horizontal no deseado */
-    overflow-y: auto;   /* Permite desplazamiento vertical */
-    background-attachment: scroll; /* ✅ Permite desplazamiento */
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh; /* Permite que crezca con el contenido */
+    overflow: hidden;
+    z-index: -1;
+    }
+
+    .background-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .overlay {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
   }
+
+    /* Contenedor general del background */
+    .background-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+  body.home .background-container {
+    background: none;
+}
+
+/* 🎥 Fondo de video para Home */
+body.home .video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body.home .background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+/* 🎨 Fondo de gradiente para WhoIAm y Projects */
+body.whoiam .background-container, 
+body.projects .background-container {
+  background: linear-gradient(180deg, #232f45 10%, #121825 100%);
+}
+
+.gradient-bg {
+  position: absolute; /* ✅ Permite que el fondo crezca con el contenido */
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh; /* ✅ Se asegura de cubrir toda la pantalla */
+  height: auto; /* ✅ Permite que crezca si el contenido es más grande */
+  background: linear-gradient(180deg, #232f45 10%, #121825 100%);
+  z-index: -1;  
+}
+
 
   .container{
     margin-top: 50px;
@@ -28,6 +123,7 @@
     flex-direction: column;
     background-color: transparent;
   }
+
 
 
   /* 📌 FOOTER */
@@ -55,25 +151,24 @@
 
   /* 📌 PROFILE IMAGE */
   .profile-image {
-    width: 400px; 
-    height: 400px; 
+    width: 300px; 
+    height: 300px; 
     object-fit: cover; 
     border-radius: 50%; 
     float: left; 
-    margin-right: 20px; 
+    margin-top: 100px; 
   }
 
   /* 📌 NAVBAR */
   .custom-navbar {
-    position: fixed; /* ✅ Fija la navbar en la parte superior */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px; /* Altura normal de la navbar */
-    background-color: rgba(0, 0, 0, 0.7); /* Transparente con un poco de color */
-    transition: all 0.3s ease-in-out; /* ✅ Suaviza el cambio de tamaño */
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 1000;
-  }
+}
 
   .navbar-expanded {
     height: 200px !important; /* ✅ Aumenta la altura cuando el menú está abierto */
@@ -81,11 +176,9 @@
 
   /* 📌 Ajusta el contenido para que se empuje hacia abajo */
   .appContent {
-    font-family: 'Open Sans', sans-serif;
-    margin-top: 0px; /* ✅ Se empuja igual a la navbar */
-    transition: margin-top 0.3s ease-in-out; /* ✅ Suaviza el desplazamiento */
-    
-  }
+    margin-top: 70px;
+    transition: margin-top 0.3s ease-in-out;
+}
 
   .appContent.shifted {
     margin-top: 20px !important; /* ✅ Se mueve cuando el menú está abierto */
@@ -95,7 +188,7 @@
   /* 📌 Estilos de los enlaces */
   .custom-navbar .nav-link {
     font-family: 'Work Sans', sans-serif;
-    color: #00bfff !important; /* Color azul brillante */
+    color: #66D9E0!important;
     font-size: 1.2rem;
     font-weight: bold;
     margin-right: 15px;
@@ -115,7 +208,7 @@
   padding: 20px; /* Espaciado interno */
   margin: 15px auto; /* Espaciado entre tarjetas */
   width: 90%; /* Ajuste de ancho */
-  max-width: 700px; /* Máximo ancho */
+  max-width: 1000px; /* Máximo ancho */
   text-align: center; /* Centra el contenido */
   backdrop-filter: blur(8px); /* Efecto de desenfoque en el fondo */
   border: 2px solid rgba(255, 255, 255, 0.3); /* Borde blanco suave */
@@ -133,7 +226,7 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 1.5rem; /* Tamaño del título */
   font-weight: bold; /* Negrita */
-  color: #00bfff !important;
+  color: #66D9E0 !important;
   cursor: pointer; /* Cursor interactivo */
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Sombra sutil */
 }
@@ -156,7 +249,7 @@
   padding: 10px 20px !important; /* Ajusta el padding para que el tamaño sea similar */ 
   font-size: 16px; /* Asegura que el texto tenga el mismo tamaño */
   border-radius: 10px; /* Redondea los bordes para que coincida */
-  background-color: #00bfff; /* Asegura que el color sea el mismo */
+  background-color: #66D9E0; /* Asegura que el color sea el mismo */
   color: #ffffff;
   font-weight: bold;
   border: none;
@@ -164,33 +257,119 @@
   transition: all 0.3s ease-in-out;
   width: auto !important; /* Evita que se expanda */
   display: inline-block !important; /* Asegura que el tamaño sea relativo al contenido */
-  text-decoration: none
+  text-decoration: none;
+  flex-shrink: 0;
+  align-self: center;
 }
 
 .card-button:hover {
-  background-color: #00bfff;
+  background-color: #66D9E0;
 
+}
+
+.project {
+  width: 100%;
+  height: 90vh; /* Casi toda la pantalla */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.project-image {
+  width: 100%;
+  max-height: 600px; /* Ajusta el tamaño de la imagen */
+  object-fit: cover; /* Mantiene la proporción */
+  border-radius: 10px;
+}
+
+.project-content {
+  margin-top: 20px;
+  max-width: 800px;
+}
+
+/* Ajuste general de la tarjeta */
+.project-card {
+  width: 90%; /* Para que no ocupe todo el ancho en móviles */
+  max-width: 800px; /* Ajusta el tamaño máximo */
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  flex-direction: column; /* Asegura que la imagen y el contenido se alineen correctamente */
+}
+
+/* Contenedor de la imagen para que ocupe la mayor parte */
+.image-container {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Imagen responsiva */
+.project-image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important; /* Evita distorsiones */
+}
+
+/* Contenido debajo de la imagen */
+.content {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilos adicionales */
+.project-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.project-description {
+  font-size: 1.2rem;
+}
+
+
+.testimonial-carousel {
+  width: 80%;
+  max-width: 700px;
+  margin: auto;
+  overflow: hidden; /* ✅ Asegura que solo se vea un testimonio a la vez */
 }
 
 .testimonial {
   font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
   text-align: center;
   color: white;
-  background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
-  padding: 40px;
+  background: rgba(0, 0, 0, 0.5);
+
+  padding: 20px;
   border-radius: 10px;
-  width: 80%;
+  width: 100%; /* ✅ Asegura que ocupe todo el contenedor */
+  max-width: 600px;
   margin: auto;
-  display: block;
-  min-height: 250px; /* Asegurar altura */
+
+  min-height: 250px;
   opacity: 0.9;
+  display: flex; /* ✅ Asegura que el contenido esté bien alineado */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
 
 
 /* Asegurar que el texto dentro de la testimonial se vea bien */
 .testimonial h3{
   display: block;
-  color:#00bfff !important;
+  color:#66D9E0 !important;
 }
 .testimonial p {
   display: block;
@@ -198,11 +377,12 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-#hero-section h1{
+.hero-section h1{
 font-size: 4rem;
 }
 
-#hero-section p{
+.hero-section p{
+  margin-top: 10px;
   font-size: 2rem;
   }
 
@@ -210,7 +390,7 @@ font-size: 4rem;
 
   /* 🖥️ Tablets (Ancho menor a 1024px) */
   @media (max-width: 1024px) {
-    #hero-section {
+    .hero-section {
       padding: 2rem 5rem; /* Reduce padding en pantallas medianas */
     }
 
@@ -224,16 +404,16 @@ font-size: 4rem;
 
   /* 📱 Móviles (Ancho menor a 768px) */
   @media (max-width: 768px) {
-    #hero-section {
+    .hero-section {
       padding: 1rem 2rem;
       text-align: center; /* Centra el texto */
     }
 
-    #hero-section h1 {
+    .hero-section h1 {
       font-size: 3vw; /* Escala dinámicamente el texto */
     }
 
-    #hero-section p {
+    .hero-section p {
       font-size: 1rem;
     }
 
@@ -260,14 +440,37 @@ font-size: 4rem;
     width: 80px;
   }
 
+  .image-container {
+    height: 35vh; /* Reduce el tamaño de la imagen en móviles */
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+  }
+
+  .project-description {
+    font-size: 1rem;
+  }
+
+  .project-card {
+    width: 95%; /* Asegura que se vea bien en dispositivos pequeños */
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+  }
+
+  .project-description {
+    font-size: 1rem;
+  }
 
   /* 📲 Móviles pequeños (Ancho menor a 480px) */
   @media (max-width: 480px) {
-    #hero-section h1 {
+    .hero-section h1 {
       font-size: 2rem; /* Reduce el tamaño del título */
     }
 
-    #hero-section p {
+    .hero-section p {
       font-size: 1rem;
     }
 
@@ -285,6 +488,35 @@ font-size: 4rem;
       padding: 0.6rem;
       font-size: 0.9rem;
     }
+    .image-container {
+      height: 30vh; /* Reduce el tamaño de la imagen en móviles */
+    }
+  
+    .project-title {
+      font-size: 1.2rem;
+    }
+  
+    .project-description {
+      font-size: 0.9rem;
+    }
+    .project-card {
+      width: 100%; /* Que la tarjeta use todo el ancho del viewport */
+    }
+
+    .testimonial {
+      font-family: 'Open Sans', sans-serif;
+      font-size: small;
+      text-align: center;
+      color: white;
+      background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+      padding: 10px;
+      border-radius: 10px;
+      width: 80%;
+      margin: auto;
+      min-height: 250px; /* Asegurar altura */
+      opacity: 0.9;
+    }
+
   }
 
   .logo {
@@ -297,10 +529,9 @@ font-size: 4rem;
     }
 
     .card-link{
-      color: #00bfff
+      color: #66D9E0
     }
     
-
-
+    
   
 

@@ -1,30 +1,26 @@
 import React from "react";
+import { Card } from "react-bootstrap"; // Asegura que Bootstrap está importado
 import "/src/styles/index.css";
 
-const ProjectCard = ({ title, description, image, items, links }) => {
+const CardItem = ({ title, description, image, links }) => {
   return (
-    <div className="card shadow-lg border-0 rounded" style={{ width: "18rem" }}>
-      <img src={image} className="card-img-top" alt={title} />
-      <div className="card">
-        <h5 className="card-title">{title}</h5>
-        <p className="card-text">{description}</p>
-      </div>
-      <ul className="list-group list-group-flush">
-        {items.map((item, index) => (
-          <li key={index} className="card-text">
-            {item}
-          </li>
-        ))}
-      </ul>
-      <div className="card-body">
-        {links.map((link, index) => (
-          <a key={index} href={link.url} className="card-link" target="_blank" rel="noopener noreferrer">
-            {link.text}
-          </a>
-        ))}
-      </div>
-    </div>
+    <Card className="shadow-lg border-0 project-card">
+      {/* Contenedor de imagen con Bootstrap */}
+      <Card.Img variant="top" src={image} className="project-image"/>
+      <Card.Body className="p-4">
+        <Card.Title className="fw-bold text-center">{title}</Card.Title>
+        <Card.Text>{description}</Card.Text>
+
+        <div className="d-flex justify-content-center mt-3">
+          {links.map((link, index) => (
+            <a key={index} href={link.url} className="card-button" target="_blank" rel="noopener noreferrer">
+              {link.text}
+            </a>
+          ))}
+        </div>
+      </Card.Body>
+    </Card>
   );
 };
 
-export default ProjectCard;
+export default CardItem;

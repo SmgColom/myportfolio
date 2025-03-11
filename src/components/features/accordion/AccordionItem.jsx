@@ -15,7 +15,7 @@ function AccordionItem({ title, children, onShow, isActive, className = "" }) {
         <div className="card-content">
           <p dangerouslySetInnerHTML={{ __html: children }} />
           <button className="card-button" onClick={onShow}>
-            Hide
+            -
           </button>
         </div>
       )}
@@ -23,7 +23,7 @@ function AccordionItem({ title, children, onShow, isActive, className = "" }) {
       {/* Botón para abrir el panel (Solo si `isActive` es false) */}
       {!isActive && (
         <button className="card-button" onClick={onShow}>
-          Show
+          +
         </button>
       )}
     </section>
