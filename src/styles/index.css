@@ -108,7 +108,7 @@ body.projects .background-container {
 
 
   .container{
-    margin-top: 50px;
+    margin-top: 30px;
     
   }
 
@@ -176,7 +176,7 @@ body.projects .background-container {
 
   /* 📌 Ajusta el contenido para que se empuje hacia abajo */
   .appContent {
-    margin-top: 70px;
+    margin-top: 50px;
     transition: margin-top 0.3s ease-in-out;
 }
 
