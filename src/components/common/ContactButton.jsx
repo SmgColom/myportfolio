@@ -1,13 +1,16 @@
 import React from "react";
 
 function ContactButton() {
+
+  const ContactMe = "mailto:smontoya1985@gmail.com?subject=Consulta&body=Hello, I want more info.";
+
   return (
-    <a 
-      className="card-button"
-      href="mailto:smontoya1985@gmail.com?subject=Consulta&body=Hola, quiero más información."
-    >
-      📧 Contact Me
-    </a>
+      <button 
+        onClick={() => window.open(ContactMe, "_blank")} 
+        className="card-button"
+      >📧 <strong> Contact Me</strong>
+      </button>
+  
   );
 }
 

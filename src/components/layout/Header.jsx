@@ -3,7 +3,7 @@ import { Navbar, Nav } from "react-bootstrap";
 import WhiteLogo from "../../assets/WhiteLogo.png";
 import { Link } from "react-router-dom";
 import CalendarButton from "../common/CalendarButton";
-import Inlogo from "../../assets/Inlogo.png";
+
 
 const Header = () => {
   return (
@@ -24,12 +24,6 @@ const Header = () => {
             <Nav.Link as={Link} to="/WhoIAm">Who I Am</Nav.Link>
             <Nav.Link as={Link} to="/projects">Projects</Nav.Link>
             <CalendarButton></CalendarButton>
-              <Navbar.Brand
-              href="https://www.linkedin.com/in/santiago-montoya-gomez-51912a79"
-              target="_blank"
-              rel="noopener noreferrer">
-              <img src={Inlogo} alt="Logo" style={{ height: "50px", paddingLeft: "10px", cursor: "pointer" }} />
-              </Navbar.Brand>
           </Nav>
         </Navbar.Collapse>  
       </Container>

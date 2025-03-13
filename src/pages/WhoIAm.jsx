@@ -8,8 +8,8 @@ import ProfileImage from "../assets/ProfileImage.jpeg";
 function WhoIAmPage() {
   const [panels, setPanels] = useState([
     {
-      id: 1,
-      title: "Hi, I'm Santiago Montoya – Your Partner in Digital Transformation!",
+      id: 1,  
+      title: "Your Partner in Digital Transformation!",
       content:
         "With 15+ years of experience in competitiveness, sustainability, and sales strategies, I help businesses leverage software development and web solutions to drive growth and innovation.<br/><br/>" +
         "As a Productivity & Quality Engineer and Marketing Specialist, I combine cutting-edge technology, intuitive UX/UI design, and strategic innovation to create high-performance digital experiences tailored to your business needs.<br/><br/>" +
