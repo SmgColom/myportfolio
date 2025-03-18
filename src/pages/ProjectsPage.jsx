@@ -13,8 +13,8 @@ function ProjectsPage() {
       <h1>My Projects and Portfolio</h1>
       <CardsList />
       <CarouselList />
-      <div className="hero-section">
-      <p>Get a quote for your website today!</p>
+      <div className="card-title">
+      <p style={{ marginTop: "10px" }}>Get a quote for your website today!</p>
       </div>
       <ContactButton></ContactButton>
     </Container>

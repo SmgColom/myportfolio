@@ -10,8 +10,8 @@ const CardItem = ({ title, description, image, links }) => {
       <Card.Img variant="top" src={image} className="project-image"/>
       </div> 
       <Card.Body className="p-4">
-        <Card.Title className="fw-bold text-center">{title}</Card.Title>
-        <Card.Text>{description}</Card.Text>
+        <Card.Title className="card-title">{title}</Card.Title>
+        <Card.Text className="card-content">{description}</Card.Text>
 
         <div className="d-flex justify-content-center mt-3">
           {links.map((link, index) => (
