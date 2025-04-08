@@ -56,13 +56,17 @@ function AccordionItem({ id, title, children, onShow, isActive }) {
     <AccordionWrapper id={id}> {/* <-- Aquí va el id HTML */}
       <AccordionHeader>
         <AccordionTitle>{title}</AccordionTitle>
-        <AccordionButton onClick={onShow}>
+        <AccordionButton           
+          onClick={onShow}
+          aria-expanded={isActive} 
+          aria-controls={`${id}-content`}
+          aria-label={`Toggle ${title}`}>
           {isActive ? "-" : "+"}
         </AccordionButton>
       </AccordionHeader>
 
       {isActive && (
-        <AccordionContent>
+        <AccordionContent id={`${id}-content`}>
           <p dangerouslySetInnerHTML={{ __html: children }} />
         </AccordionContent>
       )}

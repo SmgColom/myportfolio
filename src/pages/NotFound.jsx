@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom"
 import { BiHome } from "react-icons/bi";
 import styled from "styled-components";
+import { Helmet } from "react-helmet-async";
 
 const HeroSection = styled.section`
   display: flex;
@@ -30,16 +31,30 @@ const HeroPara = styled.p`
   text-align: center;
 `;
 
-const HomeBtn = styled.button`
+const HomeBtn = styled(Link)`
   font-size: 5rem;
   border: none;
   background-color: var(--bg-color);
   border-radius: 5px;
   cursor: pointer;
-  `;  
+  color: var(--text-color);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    color: var(--text-hover);
+  }
+`;  
 
 function NotFound() {
   return (
+    <>
+    <Helmet>
+      <title>404 | Page Not Found</title>
+      <meta name="robots" content="noindex" />
+    </Helmet>
     <HeroSection>
      
         <HeroTitle>Hmm...</HeroTitle>
@@ -49,8 +64,8 @@ function NotFound() {
           <BiHome id="btn-icon" aria-labelledby="Home button"/>
         </Link>
         </HomeBtn>
-    
     </HeroSection>
+    </>
   )
 }
 

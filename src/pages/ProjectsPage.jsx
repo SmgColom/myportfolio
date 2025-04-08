@@ -2,8 +2,8 @@ import CardsList from "../components/features/card/CardsList";
 import CarouselList from "../components/features/carousel/CarouselList";
 import ContactButton from '../components/common/ContactButton';
 import Tools from '../components/layout/Tools';
-
 import styled from "styled-components";
+import { Helmet } from "react-helmet-async";
 
 // ✅ Sección principal
 const HeroSection = styled.section`
@@ -44,6 +44,18 @@ const Background3 = styled.section`
 function ProjectsPage() {
   return (
     <>
+    <Helmet>
+      <title>Web Projects | Santiago Montoya - Portfolio & Web Solutions</title>
+      <meta
+        name="description"
+        content="Discover Santiago Montoya's portfolio of stunning, responsive websites built with React, HTML, CSS, and fullstack technologies. Get inspired for your next project."
+      />
+      <meta
+        name="keywords"
+        content="Web development portfolio, React websites, fullstack web projects, Santiago Montoya developer, freelance developer Melbourne"
+      />
+      <link rel="canonical" href="https://santiagomontoya.com.au/projects" />
+    </Helmet>
       <HeroSection>
         <HeroTitle>My Projects and Portfolio</HeroTitle>
         <CardsList />

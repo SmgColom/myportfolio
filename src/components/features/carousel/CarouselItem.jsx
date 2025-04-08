@@ -5,7 +5,7 @@ import { FaQuoteRight } from "react-icons/fa";
 
 
 
-const HeroSectionThree = styled.section`
+const TestimonialSection = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -17,36 +17,50 @@ const HeroSectionThree = styled.section`
 `;
 
 
-  const TestimonialTitle = styled.div`
+  const TestimonialAuthor= styled.h3`
     font-family: 'Open Sans', sans-serif;
     font-weight: bolder;
     font-size: 2rem;
     display: block;
     color: #232f45;
+
+    @media (max-width: 430px) {
+    font-size: 1.5rem;
+  }
   `;
 
-  const TestimonialText = styled.div`
+  const TestimonialText = styled.blockquote`
     display: block;
     color: #232f45;
     font-family: 'Open Sans', sans-serif;
     font-size: 2rem;
+
+    @media (max-width: 430px) {
+    font-size: 1rem;
+  }
+
     `;
 
-const Quotes = styled.div`
+const Quotes = styled.span`
 color: #232f45;
+font-size: 1.5rem;
+
+@media (max-width: 430px) {
+    font-size: 1rem;
+  }
 `;
 
 
 const CarouselItem = ({ name, text }) => {
   return (
-   
-      <HeroSectionThree>
-      <TestimonialTitle>{name}</TestimonialTitle>
-      <Quotes><FaQuoteLeft /></Quotes>
-      <TestimonialText>{text}</TestimonialText>
-      <Quotes><FaQuoteRight /></Quotes>
-      </HeroSectionThree>
-      
+    <TestimonialSection aria-label={`Testimonial by ${name}`}>
+      <TestimonialAuthor>{name}</TestimonialAuthor>
+      <TestimonialText>
+        <Quotes><FaQuoteLeft /></Quotes>
+        {text}
+        <Quotes><FaQuoteRight /></Quotes>
+      </TestimonialText>
+    </TestimonialSection>
   );
 };
 

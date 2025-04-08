@@ -2,27 +2,28 @@ import React from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom"; // ✅ Importa useNavigate
 
-const ButtonWrapper = styled.div``;
+const ButtonWrapper = styled.button`
+border: none;
+background-color: transparent;
+`;
 
-const Button = styled.div`
-  font-family: 'Work Sans', sans-serif;
-  padding: 10px 20px;
-  font-size: 16px;
+const Button = styled.button`
+ background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 0.7rem 1.2rem;
+  border: none;
   border-radius: 10px;
-  background-color: var(--button-bg);
-  border-color: var(--border-color);
-  color: var(--text-color);
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Work Sans', sans-serif;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  display: inline-block;
-  text-decoration: none;
-  flex-shrink: 0;
-  overflow: hidden;
-  margin: 0 auto;
 
-  &:hover {
-    opacity: 0.9;
+  svg {
+    font-size: 1.2rem; /* ajusta el tamaño del icono */
+    vertical-align: middle;
   }
 `;
 
@@ -35,7 +36,7 @@ function ContactButton() {
 
   return (
     <ButtonWrapper>
-      <Button onClick={handleClick}>📧 <strong>Contact Me</strong></Button>
+      <Button onClick={handleClick} aria-label="Navigate to Contact Form">📧 <strong>Contact Me</strong></Button>
     </ButtonWrapper>
   );
 }

@@ -57,7 +57,10 @@ const Layout = () => {
       <GlobalStyle isHome={isHome} />
 
       {isHome && (
-        <VideoBackground autoPlay muted loop playsInline>
+        <VideoBackground autoPlay muted loop playsInline           
+        title="Background video"
+        role="presentation"
+        aria-hidden="true">
           <source src={BGVideo} type="video/mp4" />
         </VideoBackground>
       )}

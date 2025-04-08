@@ -29,7 +29,7 @@ const projects = [
 ];
 
 // 📌 Estilos personalizados
-const CardsContainer = styled.div`
+const CardsContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,7 +42,7 @@ const CardsContainer = styled.div`
     margin-top: 3rem;
   }
 
-  @media (min-width: 430px) {
+  @media (max-width: 430px) {
     padding: 0rem;
     margin-top: 1rem;
   }
@@ -64,7 +64,7 @@ const CardList = () => {
   }, [location.hash]);
 
   return (
-    <CardsContainer>
+    <CardsContainer aria-label="Project showcase">
       {projects.map((project, index) => (
         <CardItem key={index} id={`project-${index + 1}`} {...project} />
       ))}

@@ -35,7 +35,7 @@ const ValuesGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 `;
 
-const ValueCard = styled.div`
+const ValueCard = styled.section`
 
   padding: 0rem;
 `;
@@ -64,22 +64,22 @@ const ValueDescription = styled.p`
 export default function Section() {
   const values = [
     {
-      icon: <FaFileSignature />,
+      icon: <FaFileSignature aria-hidden="true" />,
       title: 'Accountability',
       description: 'I take ownership of my work and deliver results with reliability and integrity, ensuring every task is completed with care and responsibility.',
     },
     {
-      icon: <FaBookReader />,
+      icon: <FaBookReader aria-hidden="true"  />,
       title: 'Continuous Learning',
       description: 'I stay curious and committed to growth, constantly exploring new technologies and trends to keep my skills sharp and relevant.',
     },
     {
-      icon: <MdOutlineHandshake />,
+      icon: <MdOutlineHandshake aria-hidden="true"  />,
       title: 'Collaboration',
       description: 'I thrive in team environments, communicating clearly and working closely with others to turn ideas into impactful digital solutions.',
     },
     {
-      icon: <FaFireAlt />,
+      icon: <FaFireAlt aria-hidden="true"  />,
       title: 'Genuine Passion',
       description: 'I bring energy and enthusiasm to every project, driven by a true love for web development and creating meaningful digital experiences.',
     },
@@ -87,7 +87,7 @@ export default function Section() {
 
   return (
     <Background2>
-      <HeroSectionTwo>
+      <HeroSectionTwo aria-label="Values Section">
         <HeroTitleTwo>My Values</HeroTitleTwo>
         <ValuesGrid>
           {values.map((value, index) => (

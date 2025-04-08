@@ -102,6 +102,24 @@ const ThemeButton = styled.button`
   cursor: pointer;
   margin-left: 1rem;
   color: var(--text-color);
+
+  @media (min-width: 820px) {
+    margin-left:0;
+    text-align: left;
+    
+  }
+
+  @media (min-width: 768px) {
+    margin-left:0;
+    text-align: left;
+    
+  }
+
+  @media (min-width: 430px) {
+    margin-left:0;
+    text-align: left;
+    
+  }
 `;
 
 const Header = ({ isExpanded, setIsExpanded }) => {
@@ -129,7 +147,7 @@ const Header = ({ isExpanded, setIsExpanded }) => {
     <StyledNavbar expand="lg" expanded={isExpanded} $scrolled={scrolled}>
       <Container fluid>
         <Navbar.Brand as={Link} to="/" onClick={closeMenu}>
-          <Logo src={currentLogo} alt="Logo" />
+          <Logo src={currentLogo} alt="Santiago Montoya logo" />
         </Navbar.Brand>
 
         <StyledNavbarToggle onClick={handleToggle} aria-controls="navbar-nav">
@@ -143,12 +161,16 @@ const Header = ({ isExpanded, setIsExpanded }) => {
             <StyledNavLink as={Link} to="/projects" onClick={closeMenu}>Projects</StyledNavLink>
 
             {!isHome && (
-              <ThemeButton onClick={toggleTheme}>
+              <ThemeButton 
+              onClick={toggleTheme}
+                aria-label="Toggle dark/light mode"
+                title="Toggle theme"
+              >
                 {mode === "dark" ? "🌙" : "☀️"}
               </ThemeButton>
             )}
 
-            <div className="mt-3 mt-lg-0">
+            <div className="mt-3 mt-lg-0" aria-label="Book a meeting">
               <CalendarButton />
             </div>
           </NavWrapper>

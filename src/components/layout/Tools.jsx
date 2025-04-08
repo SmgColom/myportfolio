@@ -94,11 +94,11 @@ export default function Section() {
   return (
 
       <HeroSectionFour>
-        <HeroTitleFour>My most common technologies</HeroTitleFour>
-        <ValuesGrid>
+        <HeroTitleFour>Technologies I Use for Modern Web Development</HeroTitleFour>
+        <ValuesGrid role="list" aria-label="Technology tools I use">
           {values.map((value, index) => (
-            <ValueCard key={index}>
-              <Icon>{value.icon}</Icon>
+            <ValueCard key={index} role="listitem">
+              <Icon aria-hidden="true">{value.icon}</Icon>
               <ValueLabel>{value.label}</ValueLabel>
             </ValueCard>
           ))}

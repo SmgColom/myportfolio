@@ -4,6 +4,7 @@ import Joi from "joi-browser";
 import { BsWhatsapp } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import { IoLocationOutline } from "react-icons/io5";
+import { Helmet } from "react-helmet-async";
 
 const FullWidthWrapper = styled.div`
   width: 100%;
@@ -267,22 +268,39 @@ const GoogleForm = () => {
 
   return (
     <FullWidthWrapper>
+        <Helmet>
+        <title>Contact Santiago Montoya | Fullstack Web Developer</title>
+        <meta name="description" content="Send Santiago a message about your next website or project. Based in Melbourne and Medellín." />
+        <link rel="canonical" href="https://santiagomontoya.com.au/ContactMe" />
+      </Helmet>
       <Wrapper>
         <FormColumn>
           <FormTitle>Contact Me</FormTitle>
           <StyledForm onSubmit={handleSubmit} noValidate>
-            <Input name="firstName" placeholder="First Name" value={formData.firstName} onChange={handleChange} />
+          <label htmlFor="firstName" hidden>First Name</label>
+            <Input id="firstName" name="firstName" placeholder="First Name" autoComplete="given-name" value={formData.firstName} onChange={handleChange} />
             {errors.firstName && <small style={{ color: 'red' }}>{errors.firstName}</small>}
-            <Input name="lastName" placeholder="Last Name" value={formData.lastName} onChange={handleChange} />
+
+            <label htmlFor="lastName" hidden>Last Name</label>
+            <Input id="lastName" name="lastName" placeholder="Last Name" autoComplete="family-name" value={formData.lastName} onChange={handleChange} />
             {errors.lastName && <small style={{ color: 'red' }}>{errors.lastName}</small>}
-            <Input name="phone" placeholder="Phone Number" value={formData.phone} onChange={handleChange} />
+
+            <label htmlFor="phone" hidden>Phone</label>
+            <Input id="phone" name="phone" placeholder="Phone Number" autoComplete="tel" value={formData.phone} onChange={handleChange} />
             {errors.phone && <small style={{ color: 'red' }}>{errors.phone}</small>}
-            <Input name="email" type="email" placeholder="Email" value={formData.email} onChange={handleChange} />
+
+            <label htmlFor="email" hidden>Email</label>
+            <Input id="email" name="email" type="email" placeholder="Email" autoComplete="email" value={formData.email} onChange={handleChange} />
             {errors.email && <small style={{ color: 'red' }}>{errors.email}</small>}
-            <Input name="company" placeholder="Company" value={formData.company} onChange={handleChange} />
-            <TextArea name="message" rows="5" placeholder="Message" value={formData.message} onChange={handleChange} />
+
+            <label htmlFor="company" hidden>Company</label>
+            <Input id="company" name="company" placeholder="Company" value={formData.company} onChange={handleChange} />
+
+            <label htmlFor="message" hidden>Message</label>
+            <TextArea id="message" name="message" rows="5" placeholder="Message" value={formData.message} onChange={handleChange} />
             {errors.message && <small style={{ color: 'red' }}>{errors.message}</small>}
-            <SubmitButton type="submit">Send</SubmitButton>
+
+            <SubmitButton type="submit" aria-label="Send message">Send</SubmitButton>
           </StyledForm>
         </FormColumn>
 

@@ -4,6 +4,7 @@ import AccordionList from "../components/features/accordion/AccordionList";
 import ProfileImage from "../assets/ProfileImage.jpeg";
 import styled from "styled-components";
 import Section from "../components/layout/Section";
+import { Helmet } from "react-helmet-async";
 
 
 const HeroSection = styled.section`
@@ -66,6 +67,12 @@ const Image = styled.img`
 
   @media (max-width: 768px) {
     margin: 2rem 0;
+    width: 500px;
+    height: 550px;
+  }
+  @media (max-width: 430px) {
+  width: 400px;
+  height: 400px;
   }
 `;
 
@@ -106,11 +113,23 @@ function WhoIAmPage() {
 
   return (
     <>
+    <Helmet>
+      <title>About Santiago Montoya | Developer, Engineer & Innovator</title>
+      <meta
+        name="description"
+        content="Get to know Santiago Montoya – a fullstack web developer with a background in engineering, marketing, and web development. Learn about his passions, education, and professional journey."
+      />
+      <meta
+        name="keywords"
+        content="Web Development Company, Web developer Melbourne, Colombian developer, personal story, background, fullstack engineer"
+      />
+      <link rel="canonical" href="https://santiagomontoya.com.au/whoiam" />
+    </Helmet>
     <HeroSection>
       <HeroTitle>Who I Am</HeroTitle>
       <ContentWrapper>
         <LeftColumn>
-          <Image src={ProfileImage} alt="Profile" />
+          <Image src={ProfileImage} alt="Santiago Montoya profile image" />
         </LeftColumn>
         <RightColumn>
           <AccordionList panels={panels} />

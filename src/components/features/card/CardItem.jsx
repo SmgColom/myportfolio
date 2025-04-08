@@ -93,13 +93,20 @@ const CardItem = ({ id, title, description, image, links }) => {
             <CardButton
               key={index}
               onClick={() => window.open(link.url, "_blank")}
+              aria-label={`Go to ${link.text}`}
             >
               {link.text}
             </CardButton>
           ))}
         </ButtonContainer>
       </CardText>
-      {image && <CardImage src={image} alt={title} />}
+      {image && (
+        <CardImage
+          src={image}
+          alt={`${title} preview`}
+          loading="lazy"
+        />
+   )}
     </CardWrapper>
   );
 };

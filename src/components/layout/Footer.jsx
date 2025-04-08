@@ -163,16 +163,16 @@ export default function Footer({ isLightMode }) {
         </FooterSection>
 
         <LogoSection>
-          <Logo src={currentLogo} alt="Logo" />
+          <Logo src={currentLogo} alt="Santiago Montoya logo" />
         </LogoSection>
       </FooterTop>
 
       <FooterBottom>
         <span>&copy; 2025 Santiago Montoya</span>
         <SocialIcons>
-          <a href="https://www.linkedin.com/in/santiago-montoya-gomez-51912a79" target="_blank" rel="noopener noreferrer"><FaLinkedin size={20} /></a>
-          <a href="https://github.com/SmgColom" target="_blank" rel="noopener noreferrer"><FaGithub size={20} /></a>
-          <a href="https://www.upwork.com/freelancers/~014dc236066c8a379f?mp_source=share" target="_blank" rel="noopener noreferrer"><FaSquareUpwork size={20} /></a>
+          <a href="https://www.linkedin.com/in/santiago-montoya-gomez-51912a79" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><FaLinkedin size={20} /></a>
+          <a href="https://github.com/SmgColom" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><FaGithub size={20} /></a>
+          <a href="https://www.upwork.com/freelancers/~014dc236066c8a379f?mp_source=share" title="Upwork" aria-label="Upwork" target="_blank" rel="noopener noreferrer"><FaSquareUpwork size={20} /></a>
         </SocialIcons>
       </FooterBottom>
     </FooterWrapper>
