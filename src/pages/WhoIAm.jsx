@@ -1,14 +1,78 @@
 import { useState } from "react";
-import "../styles/index.css"; 
+import "../style/index.css"; 
 import AccordionList from "../components/features/accordion/AccordionList";
-import { Container } from "react-bootstrap";
 import ProfileImage from "../assets/ProfileImage.jpeg";
+import styled from "styled-components";
+import Section from "../components/layout/Section";
 
+
+const HeroSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  min-height: auto;
+  max-width: 1200px;
+  padding: 4rem 2rem;
+  margin: 0 auto;
+  width: 100%;
+`;
+
+const HeroTitle = styled.h1`
+  font-family: 'Work Sans', sans-serif;
+  font-weight: bolder;
+  color: var(--title-color);
+  font-size: clamp(2rem, 3vw, 2em);
+`;
+
+
+const ContentWrapper = styled.div`
+  margin-top: 2rem; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  align-items: flex-start; 
+  gap: 2rem;
+  flex-wrap: wrap; /* Para que sea responsive */
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+
+const LeftColumn = styled.div`
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+`;
+
+const RightColumn = styled.div`
+  flex: 1;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: clamp(1rem, 4vw, 1.2rem);
+  color: var(--text-color);
+  text-align: left;
+
+`;
+
+const Image = styled.img`
+  width: 500px;
+  height: 635px;
+  object-fit: cover;
+  margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    margin: 2rem 0;
+  }
+`;
 
 function WhoIAmPage() {
   const [panels, setPanels] = useState([
     {
-      id: 1,  
+      id: "profile",  
       title: "Your Partner in Digital Transformation!",
       content:
         "With 15+ years of experience in competitiveness, sustainability, and sales strategies, I help businesses leverage software development and web solutions to drive growth and innovation.<br/><br/>" +
@@ -20,7 +84,7 @@ function WhoIAmPage() {
         "Let's build a seamless digital experience for your company! Ready to take your business to the next level? Let's connect! 💡"
     },
     {
-      id: 2,
+      id: "education",
       title: "My Educational Background",
       content:
         "I'm currently expanding my tech expertise at Holmesglen Institute, working towards a Diploma in Information Technology.<br/><br/>" +
@@ -29,7 +93,7 @@ function WhoIAmPage() {
         "This blend of engineering, marketing, and tech empowers me to create innovative and high-performing digital solutions!"
     },
     {
-      id: 3,
+      id: "passions",
       title: "My Passions",
       content:
         "I'm all about energy, creativity, and constant growth! ⚡<br/><br/>" +
@@ -41,13 +105,21 @@ function WhoIAmPage() {
   ]);
 
   return (
-      <Container className="box">
-        <h1>Who I Am</h1>
-        <img className="profile-image" src={ProfileImage} alt="Profile" />
+    <>
+    <HeroSection>
+      <HeroTitle>Who I Am</HeroTitle>
+      <ContentWrapper>
+        <LeftColumn>
+          <Image src={ProfileImage} alt="Profile" />
+        </LeftColumn>
+        <RightColumn>
           <AccordionList panels={panels} />
-      </Container>
+        </RightColumn>
+      </ContentWrapper>
+    </HeroSection>
+    <Section />
+    </>
   );
 }
-
 export default WhoIAmPage;
 

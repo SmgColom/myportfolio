@@ -1,54 +1,79 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap"; // Importa Bootstrap Grid
+import React, { useEffect } from "react";
+import styled from "styled-components";
 import CardItem from "./CardItem";
+import { useLocation } from "react-router-dom";
+
 import SG from "../../../assets/SG.png";  
 import Bwe from "../../../assets/Bwe.png"; 
-import Fwd1 from "../../../assets/Fwd1.png";
 import Fwd2 from "../../../assets/Fwd2.png"; 
-import LP from "../../../assets/LP.png";
-
 
 const projects = [
   {
     title: "Landing Page Starter",
-    description: "Perfect for showcasing your business online.",
+    description: "A focused and compelling web page designed to capture attention, showcase your offer, and drive visitors to take action. Perfect for promoting products, services, or campaigns.",
     image: Bwe,
-      links: [{ text: "Demo", url: "https://colombiacoffee.santiagomontoya.com.au/" },
-    ],
+    links: [{ text: "Demo", url: "https://colombiacoffee.santiagomontoya.com.au/" }],
   },
   {
     title: "Business Website Essential",
-    description: "Functional business website",
+    description: "A professional and streamlined website built to showcase your business, engage customers, and establish a strong online presence",
     image: SG,
-    links: [
-      { text: "Demo", url: "https://thesavegroup.com.au/" },
-    ],
+    links: [{ text: "Demo", url: "https://thesavegroup.com.au/" }],
   },
-  
   {
     title: "Fullstack Web Development",
-    description: "Complete web application. Perfect for startups or businesses requiring advanced functionalities",
+    description: "A Complete web application from frontend to backend. Perfect for startups or businesses requiring advanced functionalities",
     image: Fwd2,
-    links: [
-      { text: "Demo", url: "https://wellness-1-kuob.onrender.com" },
-    ],
+    links: [{ text: "Demo", url: "https://wellness-1-kuob.onrender.com" }],
   },
 ];
 
+// 📌 Estilos personalizados
+const CardsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  gap: 2rem;
+
+  @media (min-width: 768px) {
+    padding: 0rem;
+    margin-top: 3rem;
+  }
+
+  @media (min-width: 430px) {
+    padding: 0rem;
+    margin-top: 1rem;
+  }
+`;
 
 const CardList = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const hash = location.hash.replace("#", "");
+      const element = document.getElementById(hash);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 300);
+      }
+    }
+  }, [location.hash]);
+
   return (
-    <Container className="my-4">
-      <Row className="g-4">
-        {projects.map((project, index) => (
-          <Col key={index} xs={12} md={10} lg={8} className="mx-auto">
-            <CardItem {...project} />
-          </Col>
-        ))}
-      </Row>
-    </Container>
+    <CardsContainer>
+      {projects.map((project, index) => (
+        <CardItem key={index} id={`project-${index + 1}`} {...project} />
+      ))}
+    </CardsContainer>
   );
 };
 
 export default CardList;
+
+
+
 

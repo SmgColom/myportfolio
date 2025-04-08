@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+:root {
+  --bg-color: linear-gradient(180deg, #232f45 10%, #121825 100%);
+  --text-color: #FFFFFF;
+  --title-color: #FFFFFF;
+  --text-hover: #66d9e0;
+  --navbar-bg: rgba(0, 0, 0, 0.7);
+  --card-bg: linear-gradient(180deg, #232f45 10%, #121825 100%);
+  --card-text: #ffffff;
+  --button-bg: #66d9e0;
+  --button-bg-hover: #e9ecef;
+  --button-text: #FFFFFF;
+  --button-text-hover: #232f45;
+  --border-color: #FFFFFF;
+  --mode-color: #FFFFFF;
+  --logo-dark: url("/assets/WhiteLogo.svg");
+}
+
+.lightmode{
+  --bg-color: linear-gradient(180deg, #f8f9fa 10%, #e9ecef 100%);
+  --text-color: #232f45;
+  --title-color: #232f45;
+  --text-hover: #66d9e0;
+  --navbar-bg: rgba(0, 0, 0, 0.7);
+  --card-bg: linear-gradient(180deg, #f8f9fa 10%, #e9ecef 100%);
+  --card-text: #232f45;
+  --button-bg: #66d9e0;
+  --button-text: #FFFFFF;
+  --border-color:#232f45;
+  --mode-color: #232f45;
+  --logo-dark: url("/assets/MyLogo.svg");
+
+}
+
+
+  
+    
+  
+
