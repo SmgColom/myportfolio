@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://santiagomontoya.com.au/sitemap.xml
