@@ -3,22 +3,22 @@ import styled from "styled-components";
 import CardItem from "./CardItem";
 import { useLocation } from "react-router-dom";
 
-import SG from "../../../assets/SG.png";  
-import Bwe from "../../../assets/Bwe.png"; 
+import SG from "../../../assets/SG.jpg";  
+import Dw from "../../../assets/Dw.jpg"; 
 import Fwd2 from "../../../assets/Fwd2.png"; 
 
 const projects = [
-  {
-    title: "Landing Page Starter",
-    description: "A focused and compelling web page designed to capture attention, showcase your offer, and drive visitors to take action. Perfect for promoting products, services, or campaigns.",
-    image: Bwe,
-    links: [{ text: "Demo", url: "https://colombiacoffee.santiagomontoya.com.au/" }],
-  },
   {
     title: "Business Website Essential",
     description: "A professional and streamlined website built to showcase your business, engage customers, and establish a strong online presence",
     image: SG,
     links: [{ text: "Demo", url: "https://thesavegroup.com.au/" }],
+  },
+  {
+    title: "Dynamic Web Page",
+    description: "An interactive and flexible web page built to display real-time content, adapt to user behavior, and enhance engagement. Ideal for platforms that require user input, data updates, or personalized experiences such as dashboards, portals, or web apps.",
+    image: Dw,
+    links: [{ text: "Demo", url: "https://miletoroseguros.vercel.app/news/blog" }],
   },
   {
     title: "Fullstack Web Development",

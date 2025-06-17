@@ -4,7 +4,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import styled from "styled-components";
-import BGVideo from "../../assets/BGVideo.mp4";
+import BGVideo2 from "../../assets/BGVideo2.mp4";
 import { useTheme } from "../../context/ThemeContext"; // ✅ import
 
 // ✅ Styled Components necesarios
@@ -61,7 +61,7 @@ const Layout = () => {
         title="Background video"
         role="presentation"
         aria-hidden="true">
-          <source src={BGVideo} type="video/mp4" />
+          <source src={BGVideo2} type="video/mp4" />
         </VideoBackground>
       )}
 

@@ -13,65 +13,35 @@ const FullWidthWrapper = styled.div`
 
 const Wrapper = styled.section`
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: stretch;
-  gap: 4rem;
+  gap: 2rem;
+  align-items: flex-start;
+  text-align: left;
+  min-height: auto;
   padding: 4rem 2rem;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
-
-  @media (max-width: 768px) {
-  flex-direction: column;
-  align-items: center;
-  gap: 3rem;
-  text-align: center;
-}
 
   @media (max-width: 430px) {
     flex-direction: column;
     align-items: center;
-    gap: 3rem;
+    
   }
 
 `;
 
 const FormColumn = styled.div`
   flex: 1;
-
-  @media (max-width: 768px) {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center; /* 👈 esto faltaba */
-}
-
+  text-align: left;
+  
+ 
   @media (max-width: 430px) {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  
 }
   
-`;
-
-const InfoColumn = styled.div`
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  @media (max-width: 1024px) {
-    justify-content: center;
-    align-items: center;
-    padding-top: 0;
-  }
-
-  @media (max-width: 430px) {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding-top: 2rem;
-  }
 `;
 
 const FormTitle = styled.h2`
@@ -167,17 +137,26 @@ const CloseButton = styled.button`
 `;
 
 const InfoBox = styled.div`
+  flex: 1;
+  padding-top: 2rem;
+  display: flex;
+  align-items: right;
+  text-align: right;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.7rem;
   font-family: 'Work Sans', sans-serif;
   color: #232f45;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+
+  @media (max-width: 430px) {
+
+text-align: center;
+}
 
   h3 {
     font-weight: bold;
-    margin-bottom: 0.5rem;
+
   }
 
   p {
@@ -185,29 +164,21 @@ const InfoBox = styled.div`
     font-family: 'Open Sans', sans-serif;
   }
 
-  @media (max-width: 1024px) {
-    max-width: 80%;
-  }
 
-  @media (max-width: 768px) {
-    align-items: center;
-  }
-
-  @media (max-width: 430px) {
-    align-items: center;
-    max-width: 90%;
-    margin: 0 auto;
-  }
 `;
 
 const Icon = styled.div`
   color: #232f45;
-  text-align: center;
+  text-align: right;
   font-size: 2rem;
 
   &:hover {
     color: #66d9e0;
   }
+  @media (max-width: 430px) {
+
+text-align: center;
+}
 `;
 
 const GoogleForm = () => {
@@ -304,7 +275,7 @@ const GoogleForm = () => {
           </StyledForm>
         </FormColumn>
 
-        <InfoColumn>
+        
 
 
 <InfoBox>
@@ -334,11 +305,10 @@ const GoogleForm = () => {
   <div>
     <Icon><IoLocationOutline /></Icon>
     <h3>Location</h3>
-    <p>15 Clifton Street, Prahan, Melbourne, Australia</p>
-    <p>Calle 21 Sur # 41 - 117, Envigado, Antioquia, Colombia</p>
+    <p>Medellín, Colombia</p>
   </div>
 </InfoBox>
-        </InfoColumn>
+       
 
         {showModal && (
           <Modal>

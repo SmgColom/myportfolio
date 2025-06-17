@@ -98,7 +98,8 @@ const NavWrapper = styled(Nav)`
 const ThemeButton = styled.button`
   background: none;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1 rem;
+  padding-right: 1rem;
   cursor: pointer;
   margin-left: 1rem;
   color: var(--text-color);
@@ -156,11 +157,7 @@ const Header = ({ isExpanded, setIsExpanded }) => {
 
         <CollapsedNav id="navbar-nav">
           <NavWrapper className="ms-auto">
-            <StyledNavLink as={Link} to="/" onClick={closeMenu}>Home</StyledNavLink>
-            <StyledNavLink as={Link} to="/WhoIAm" onClick={closeMenu}>Who I Am</StyledNavLink>
-            <StyledNavLink as={Link} to="/projects" onClick={closeMenu}>Projects</StyledNavLink>
-
-            {!isHome && (
+          {!isHome && (
               <ThemeButton 
               onClick={toggleTheme}
                 aria-label="Toggle dark/light mode"
@@ -169,6 +166,11 @@ const Header = ({ isExpanded, setIsExpanded }) => {
                 {mode === "dark" ? "🌙" : "☀️"}
               </ThemeButton>
             )}
+            <StyledNavLink as={Link} to="/" onClick={closeMenu}>Home</StyledNavLink>
+            <StyledNavLink as={Link} to="/WhoIAm" onClick={closeMenu}>Who I Am</StyledNavLink>
+            <StyledNavLink as={Link} to="/projects" onClick={closeMenu}>Projects</StyledNavLink>
+
+
 
             <div className="mt-3 mt-lg-0" aria-label="Book a meeting">
               <CalendarButton />
