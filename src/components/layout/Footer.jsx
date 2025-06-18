@@ -143,16 +143,9 @@ export default function Footer({ isLightMode }) {
 
         <FooterSection>
           <h4>Solution</h4>
-          <a href="/projects#project-1">Landing Page Starter</a>
-          <a href="/projects#project-2">Business Website Essential</a>
+          <a href="/projects#project-1">Business Website Essential</a>
+          <a href="/projects#project-2">Dynamic Web Page</a>
           <a href="/projects#project-3">Fullstack Web Development</a>
-        </FooterSection>
-
-        <FooterSection>
-          <h4>Melbourne</h4>
-          <p>15 Clifton St</p>
-          <p>Prahan, VIC 3181</p>
-          <p>(04) 32318142</p>
         </FooterSection>
 
         <FooterSection>
