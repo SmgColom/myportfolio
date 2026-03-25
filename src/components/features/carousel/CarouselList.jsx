@@ -4,8 +4,8 @@ import CarouselItem  from "./CarouselItem";
 
 
 const testimonies = [
-  { name: "Jane Save - Save Group", text: " From the outset, this team displayed exceptional professionalism and a deep understanding of our specific needs. They not only improved the functionality and content of our site, but also introduced creative elements that truly set it apart.  I highly recommend their services to anyone seeking top-tier web development with a creative edge. Thank you to the team for your exceptional work! " },
-  { name: "Milena Toro", text: " Incredible experience! Thanks to their creative approach and intuitive tools, I was able to express my goals and visualize my future in a clear and motivating way. Every time I look at my dream map, I feel more inspired and focused on achieving everything I desire. I definitely recommend it to anyone who wants to manifest their goals and transform their life! " },
+  { name: "Jane Save - Save Group", text: " Desde el principio, este equipo demostró un profesionalismo excepcional y una profunda comprensión de nuestras necesidades específicas. No solo mejoraron la funcionalidad y el contenido de nuestro sitio web, sino que también incorporaron elementos creativos que lo distinguen de los demás. Recomiendo ampliamente sus servicios a cualquiera que busque desarrollo web de primer nivel con un toque creativo. ¡Muchas gracias al equipo por su excelente trabajo! " },
+  { name: "Milena Toro", text: " ¡Una experiencia increíble! Gracias a su enfoque creativo y herramientas intuitivas, pude expresar mis metas y visualizar mi futuro de forma clara y motivadora. Cada vez que miro mi mapa de sueños, me siento más inspirada y concentrada en lograr todo lo que deseo. ¡Sin duda lo recomiendo a cualquiera que quiera manifestar sus metas y transformar su vida! " },
 ];
 
 const CarouselList = () => {
@@ -13,7 +13,7 @@ const CarouselList = () => {
     <Carousel className="testimonial-carousel" interval={10000} pause="hover" aria-label="Client testimonials carousel">
       {testimonies.map((testimony, index) => (
         
-        <Carousel.Item key={`testimonial-${index}`}> {/* ✅ Envuelve cada testimonio en un `Carousel.Item` */}
+        <Carousel.Item key={`testimonial-${index}`}> 
           <CarouselItem {...testimony} />
         </Carousel.Item>
       ))}

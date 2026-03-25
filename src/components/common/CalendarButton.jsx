@@ -28,7 +28,7 @@ function CalendarButton() {
   return (
     <StyledButton onClick={() => window.open(googleCalendarUrl, "_blank", "noopener noreferrer")} aria-label="Book a meeting on Google Calendar" >
       <FaCalendarAlt />
-      <span>Book Me</span>
+      <span>Agéndame</span>
     </StyledButton>
   );
 }

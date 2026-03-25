@@ -5,30 +5,53 @@ import { useLocation } from "react-router-dom";
 
 import SG from "../../../assets/SG.jpg";  
 import Dw from "../../../assets/Dw.jpg"; 
-import Fwd2 from "../../../assets/Fwd2.png"; 
+import Fwd2 from "../../../assets/Fwd2.png";
+import Eurodollar from "../../../assets/Eurodollar.png";
+import Juva from "../../../assets/Juva.png";
+import Metric from "../../../assets/Metric.png";
 
 const projects = [
   {
-    title: "Business Website Essential",
-    description: "A professional and streamlined website built to showcase your business, engage customers, and establish a strong online presence",
+    title: "Sitio Web Empresarial esencial",
+    description: "Un sitio web profesional y optimizado, diseñado para mostrar su negocio, atraer clientes y establecer una sólida presencia en línea.",
     image: SG,
     links: [{ text: "Demo", url: "https://thesavegroup.com.au/" }],
   },
   {
-    title: "Dynamic Web Page",
-    description: "An interactive and flexible web page built to display real-time content, adapt to user behavior, and enhance engagement. Ideal for platforms that require user input, data updates, or personalized experiences such as dashboards, portals, or web apps.",
+    title: "Sitio Web Dinámico",
+    description: "Una página web interactiva y flexible diseñada para mostrar contenido en tiempo real, adaptarse al comportamiento del usuario y mejorar la interacción. Ideal para plataformas que requieren la entrada de datos del usuario, actualizaciones de datos o experiencias personalizadas, como paneles de control, portales o aplicaciones web.",
     image: Dw,
     links: [{ text: "Demo", url: "https://miletoroseguros.vercel.app/news/blog" }],
   },
   {
-    title: "Fullstack Web Development",
-    description: "A Complete web application from frontend to backend. Perfect for startups or businesses requiring advanced functionalities",
+    title: "Desarrollo Fullstack",
+    description: "Una aplicación web completa, desde el frontend hasta el backend. Perfecta para startups o empresas que requieren funcionalidades avanzadas.",
     image: Fwd2,
     links: [{ text: "Demo", url: "https://wellness-1-kuob.onrender.com" }],
   },
+  {
+    title: "Sitio Web Dinámico",
+    description: "Una página web interactiva y flexible diseñada para mostrar contenido en tiempo real, adaptarse al comportamiento del usuario y mejorar la interacción. Ideal para plataformas que requieren la entrada de datos del usuario, actualizaciones de datos o experiencias personalizadas, como paneles de control, portales o aplicaciones web.",
+    image: Eurodollar,
+    links: [{ text: "Demo", url: "https://www.eurodollarcolombia.com/" }],
+  },
+    {
+    title: "Landing Page Dinámica",
+    description: "Landing page desarrollada para una empresa de servicios de limpieza en Melbourne, enfocada en conversión y experiencia de usuario. Incluye secciones de servicios, testimonios y contacto directo, con diseño responsive y optimización SEO para captación de clientes potenciales.",
+    image: Juva,
+    links: [{ text: "Demo", url: "https://juva-cleaning.vercel.app/" }],
+  },
+
+      {
+    title: "Sitio Web Dinámico",
+    description: "Una página web interactiva y flexible diseñada para mostrar contenido en tiempo real, adaptarse al comportamiento del usuario y mejorar la interacción. Ideal para plataformas que requieren la entrada de datos del usuario, actualizaciones de datos o experiencias personalizadas, como paneles de control, portales o aplicaciones web.",
+    image: Metric,
+    links: [{ text: "Demo", url: "https://metric-omega.vercel.app/" }],
+  },
+
 ];
 
-// 📌 Estilos personalizados
+
 const CardsContainer = styled.section`
   display: flex;
   flex-direction: column;

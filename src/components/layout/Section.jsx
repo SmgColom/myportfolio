@@ -65,30 +65,30 @@ export default function Section() {
   const values = [
     {
       icon: <FaFileSignature aria-hidden="true" />,
-      title: 'Accountability',
-      description: 'I take ownership of my work and deliver results with reliability and integrity, ensuring every task is completed with care and responsibility.',
+      title: 'Responsabilidad',
+      description: 'Me responsabilizo de mi trabajo y entrego resultados con fiabilidad e integridad, asegurándome de que cada tarea se complete con cuidado y responsabilidad.',
     },
     {
       icon: <FaBookReader aria-hidden="true"  />,
-      title: 'Continuous Learning',
-      description: 'I stay curious and committed to growth, constantly exploring new technologies and trends to keep my skills sharp and relevant.',
+      title: 'Aprendizaje continuo',
+      description: 'Mantengo la curiosidad y el compromiso con el crecimiento, explorando constantemente nuevas tecnologías y tendencias para mantener mis habilidades relevantes y al día.',
     },
     {
       icon: <MdOutlineHandshake aria-hidden="true"  />,
-      title: 'Collaboration',
-      description: 'I thrive in team environments, communicating clearly and working closely with others to turn ideas into impactful digital solutions.',
+      title: 'Colaboración',
+      description: 'Me desenvuelvo muy bien en entornos de equipo, comunicándome con claridad y trabajando en estrecha colaboración con los demás para convertir ideas en soluciones digitales de gran impacto.',
     },
     {
       icon: <FaFireAlt aria-hidden="true"  />,
-      title: 'Genuine Passion',
-      description: 'I bring energy and enthusiasm to every project, driven by a true love for web development and creating meaningful digital experiences.',
+      title: 'Pasion Genuina',
+      description: 'Aporto energía y entusiasmo a cada proyecto, impulsado por un verdadero amor por el desarrollo web y la creación de experiencias digitales significativas.',
     },
   ];
 
   return (
     <Background2>
       <HeroSectionTwo aria-label="Values Section">
-        <HeroTitleTwo>My Values</HeroTitleTwo>
+        <HeroTitleTwo>Mis valores</HeroTitleTwo>
         <ValuesGrid>
           {values.map((value, index) => (
             <ValueCard key={index}>

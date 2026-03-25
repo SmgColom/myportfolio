@@ -10,7 +10,7 @@ const AccordionWrapper = styled.section`
 
 const AccordionHeader = styled.div`
   display: flex;
-  justify-content: space-between; // Título a la izquierda, botón a la derecha
+  justify-content: space-between; 
   align-items: center;
   gap: 1rem;
   width: 100%;
@@ -53,7 +53,7 @@ const AccordionButton = styled.button`
 
 function AccordionItem({ id, title, children, onShow, isActive }) {
   return (
-    <AccordionWrapper id={id}> {/* <-- Aquí va el id HTML */}
+    <AccordionWrapper id={id}> 
       <AccordionHeader>
         <AccordionTitle>{title}</AccordionTitle>
         <AccordionButton           

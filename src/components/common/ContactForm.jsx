@@ -246,18 +246,18 @@ const GoogleForm = () => {
       </Helmet>
       <Wrapper>
         <FormColumn>
-          <FormTitle>Contact Me</FormTitle>
+          <FormTitle>Contáctame</FormTitle>
           <StyledForm onSubmit={handleSubmit} noValidate>
-          <label htmlFor="firstName" hidden>First Name</label>
-            <Input id="firstName" name="firstName" placeholder="First Name" autoComplete="given-name" value={formData.firstName} onChange={handleChange} />
+          <label htmlFor="firstName" hidden>Name</label>
+            <Input id="firstName" name="firstName" placeholder="Nombre" autoComplete="given-name" value={formData.firstName} onChange={handleChange} />
             {errors.firstName && <small style={{ color: 'red' }}>{errors.firstName}</small>}
 
             <label htmlFor="lastName" hidden>Last Name</label>
-            <Input id="lastName" name="lastName" placeholder="Last Name" autoComplete="family-name" value={formData.lastName} onChange={handleChange} />
+            <Input id="lastName" name="lastName" placeholder="Apellido" autoComplete="family-name" value={formData.lastName} onChange={handleChange} />
             {errors.lastName && <small style={{ color: 'red' }}>{errors.lastName}</small>}
 
             <label htmlFor="phone" hidden>Phone</label>
-            <Input id="phone" name="phone" placeholder="Phone Number" autoComplete="tel" value={formData.phone} onChange={handleChange} />
+            <Input id="phone" name="phone" placeholder="Teléfono" autoComplete="tel" value={formData.phone} onChange={handleChange} />
             {errors.phone && <small style={{ color: 'red' }}>{errors.phone}</small>}
 
             <label htmlFor="email" hidden>Email</label>
@@ -265,13 +265,13 @@ const GoogleForm = () => {
             {errors.email && <small style={{ color: 'red' }}>{errors.email}</small>}
 
             <label htmlFor="company" hidden>Company</label>
-            <Input id="company" name="company" placeholder="Company" value={formData.company} onChange={handleChange} />
+            <Input id="company" name="company" placeholder="Compañía" value={formData.company} onChange={handleChange} />
 
             <label htmlFor="message" hidden>Message</label>
-            <TextArea id="message" name="message" rows="5" placeholder="Message" value={formData.message} onChange={handleChange} />
+            <TextArea id="message" name="message" rows="5" placeholder="Mensaje" value={formData.message} onChange={handleChange} />
             {errors.message && <small style={{ color: 'red' }}>{errors.message}</small>}
 
-            <SubmitButton type="submit" aria-label="Send message">Send</SubmitButton>
+            <SubmitButton type="submit" aria-label="Send message">Enviar</SubmitButton>
           </StyledForm>
         </FormColumn>
 
@@ -287,9 +287,8 @@ const GoogleForm = () => {
     >
       <Icon><BsWhatsapp /></Icon>
     </a>
-    <h3>Text Me</h3>
+    <h3>Chatéame</h3>
     <p>+57 3157274796</p>
-    <p>+61 432318142</p>
   </div>
 
   <div>
@@ -298,13 +297,13 @@ const GoogleForm = () => {
     >
       <Icon><MdEmail /></Icon>
     </a>
-    <h3>Email Me</h3>
+    <h3>Escríbeme</h3>
     <p>smontoya1985@gmail.com</p>
   </div>
 
   <div>
     <Icon><IoLocationOutline /></Icon>
-    <h3>Location</h3>
+    <h3>Ubicación</h3>
     <p>Medellín, Colombia</p>
   </div>
 </InfoBox>
@@ -313,9 +312,9 @@ const GoogleForm = () => {
         {showModal && (
           <Modal>
             <ModalContent>
-              <h3>Thank you for contacting me, {formData.firstName || ""}!</h3>
-              <p>I’ll be in touch as soon as possible!</p>
-              <CloseButton onClick={() => setShowModal(false)}>Close</CloseButton>
+              <h3>Gracias por contactarme, {formData.firstName || ""}!</h3>
+              <p>Estaré en contacto lo antes posible!</p>
+              <CloseButton onClick={() => setShowModal(false)}>Cerrar</CloseButton>
             </ModalContent>
           </Modal>
         )}

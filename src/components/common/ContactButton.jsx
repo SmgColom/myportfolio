@@ -36,7 +36,7 @@ function ContactButton() {
 
   return (
     <ButtonWrapper>
-      <Button onClick={handleClick} aria-label="Navigate to Contact Form">📧 <strong>Contact Me</strong></Button>
+      <Button onClick={handleClick} aria-label="Navigate to Contact Form">📧 <strong>Contáctame</strong></Button>
     </ButtonWrapper>
   );
 }

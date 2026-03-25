@@ -25,18 +25,46 @@ const FooterWrapper = styled.footer`
 
 const FooterTop = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr auto;
-  gap: 3rem;
-  margin-right: 0rem;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
   margin-bottom: 2rem;
-  align-items: center;
+
+ 
+  & > :nth-child(1) {
+    justify-self: start;
+  }
+
+  & > :nth-child(2) {
+    justify-self: center;
+  }
+
+  & > :nth-child(3) {
+    justify-self: end;
+    text-align: right;
+  }
 
   @media (max-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
+
+    & > :nth-child(2) {
+      justify-self: end;
+      text-align: right;
+    }
+
+    & > :nth-child(3) {
+      justify-self: start;
+      text-align: left;
+    }
   }
 
   @media (max-width: 600px) {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-self: center;
+    text-align: center;
+    & > :nth-child(1) {width: 100%;
+    }
   }
 `;
 
@@ -135,35 +163,36 @@ export default function Footer({ isLightMode }) {
     <FooterWrapper $isLightMode={shouldApplyLight}>
       <FooterTop>
         <FooterSection>
-          <h4>Who I Am</h4>
-          <a href="/whoiam#profile">Profile</a>
-          <a href="/whoiam#education">Educational Background</a>
-          <a href="/whoiam#passions">My Passions</a>
+          <h4>Quién Soy Yo</h4>
+          <a href="/whoiam#profile">Perfil</a>
+          <a href="/whoiam#education">Formación Profesional</a>
+          <a href="/whoiam#passions">Mis pasiones</a>
         </FooterSection>
 
         <FooterSection>
-          <h4>Solution</h4>
-          <a href="/projects#project-1">Business Website Essential</a>
-          <a href="/projects#project-2">Dynamic Web Page</a>
-          <a href="/projects#project-3">Fullstack Web Development</a>
+          <h4>Soluciones</h4>
+          <a href="/projects#project-1">Sitio Web Empresarial</a>
+          <a href="/projects#project-2">Sitio Web Dinámico</a>
+          <a href="/projects#project-3">Desarrollo Fullstack</a>
         </FooterSection>
 
         <FooterSection>
           <h4>Medellín</h4>
-          <p>Calle 21 Sur # 41 -117</p>
           <p>Envigado, Antioquia</p>
           <p>(+57) 3157274796</p>
         </FooterSection>
 
-        <LogoSection>
-          <Logo src={currentLogo} alt="Santiago Montoya logo" />
-        </LogoSection>
+
       </FooterTop>
 
       <FooterBottom>
-        <span>&copy; 2025 Santiago Montoya</span>
+        <span>&copy; 2026 Santiago Montoya</span>
         <SocialIcons>
-          <a href="https://www.linkedin.com/in/santiago-montoya-gomez-51912a79" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><FaLinkedin size={20} /></a>
+          <a   href="https://www.linkedin.com/in/santiagomontoyagomez" 
+            title="LinkedIn"
+            aria-label="LinkedIn"
+            target="_blank" 
+            rel="noopener noreferrer"><FaLinkedin size={20} /></a>
           <a href="https://github.com/SmgColom" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><FaGithub size={20} /></a>
           <a href="https://www.upwork.com/freelancers/~014dc236066c8a379f?mp_source=share" title="Upwork" aria-label="Upwork" target="_blank" rel="noopener noreferrer"><FaSquareUpwork size={20} /></a>
         </SocialIcons>

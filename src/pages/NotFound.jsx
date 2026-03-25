@@ -52,13 +52,13 @@ function NotFound() {
   return (
     <>
     <Helmet>
-      <title>404 | Page Not Found</title>
+      <title>404 | Página no encontrada</title>
       <meta name="robots" content="noindex" />
     </Helmet>
     <HeroSection>
      
         <HeroTitle>Hmm...</HeroTitle>
-        <HeroPara>Page not found, please go back to Home Page</HeroPara>
+        <HeroPara>Página no encontrada, por favor vuelva al inicio</HeroPara>
         <HomeBtn>
         <Link to="/">
           <BiHome id="btn-icon" aria-labelledby="Home button"/>

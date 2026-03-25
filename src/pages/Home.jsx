@@ -18,16 +18,17 @@ const HeroTitle = styled.h1`
   font-family: 'Work Sans', sans-serif;
   font-weight: bolder;
   color: var(--title-color);
-  font-size: clamp(2rem, 3vw, 2em);
-
+  font-size: clamp(1.5rem, 3vw, 2em);
+  margin-bottom: 30px;
 
 `;
 
 const HeroPara = styled.p`
   font-family: 'Open Sans', sans-serif;
-  font-size: clamp(4rem, 4vw, 2em);
+  font-size: clamp(3.5rem, 4vw, 2em);
   color: var(--text-color);
   margin: 1rem 0;
+  margin-bottom: 40px;
   text-align: left;
 
   @media (max-width: 430px){
@@ -40,21 +41,21 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Modern Web Development for Businesses | Santiago Montoya</title>
+        <title>Desarrollo web moderno para empresas | Santiago Montoya</title>
         <meta
           name="description"
-          content="Explore Santiago Montoya's portfolio – a fullstack developer building stunning, responsive websites for businesses and startups in Melbourne and Medellín."
+          content="Descubre el portafolio de Santiago Montoya, un desarrollador full-stack que crea sitios web impresionantes y responsivos para empresas y startups en cualquier lugar del mundo."
         />
         <meta
           name="keywords"
-          content="Fullstack web developer Melbourne, Santiago Montoya, responsive websites, React developer, modern web development"
+          content="Desarrollador Web fullstack Medellín, Santiago Montoya, sitios web responsivos, Desarrollador React, Desarrollo Web moderno"
         />
         <link rel="canonical" href="https://santiagomontoya.com.au" />
       </Helmet>
     <HeroSection>
-      <HeroTitle>Modern web development for a global audience</HeroTitle>
-      <HeroPara> I help you to create the most stunning website tailored for your needs</HeroPara>
-      <HeroPara>Let's do it together!</HeroPara>
+      <HeroTitle>Desarrollo web moderno para una audiencia global</HeroTitle>
+      <HeroPara> Te ayudo a crear los sitios web más asombrosos a la medida de tus necesidades</HeroPara>
+      <HeroPara>Hagámoslo juntos !</HeroPara>
       <ContactButton aria-label="Contact Santiago Montoya"/>
     </HeroSection>
     </>

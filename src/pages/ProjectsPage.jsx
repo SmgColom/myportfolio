@@ -45,21 +45,21 @@ function ProjectsPage() {
   return (
     <>
     <Helmet>
-      <title>Web Projects | Santiago Montoya - Portfolio & Web Solutions</title>
+      <title>Proyectos Web | Santiago Montoya - Portfolio & Soluciones Web</title>
       <meta
         name="description"
-        content="Discover Santiago Montoya's portfolio of stunning, responsive websites built with React, HTML, CSS, and fullstack technologies. Get inspired for your next project."
+        content="Descubre el portafolio de Santiago Montoya con impresionantes sitios web responsivos creados con React, HTML, CSS y tecnologías full-stack. Inspírate para tu próximo proyecto."
       />
       <meta
         name="keywords"
-        content="Web development portfolio, React websites, fullstack web projects, Santiago Montoya developer, freelance developer Melbourne"
+        content="Portafolio de desarrollo web, sitios web React, proyectos web fullstack, desarrollador Santiago Montoya, desarrollador freelance en Medellín"
       />
       <link rel="canonical" href="https://santiagomontoya.com.au/projects" />
     </Helmet>
       <HeroSection>
-        <HeroTitle>My Projects and Portfolio</HeroTitle>
+        <HeroTitle>Mis proyectos y portafolio</HeroTitle>
         <CardsList />
-        <CardTitle>Get a quote for your website today!</CardTitle>
+        <CardTitle>Obtén un presupuesto para tu sitio web hoy!</CardTitle>
         <ContactButton />
       </HeroSection>
       <Background3>

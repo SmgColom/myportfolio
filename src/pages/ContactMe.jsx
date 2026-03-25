@@ -10,7 +10,7 @@ const CardContactTitle = styled.div`
   padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.05); // solo para hacer visible el bloque
+  background-color: rgba(0, 0, 0, 0.05); 
 
   @media (max-width: 768px) {
     margin-left: 0rem;

@@ -52,7 +52,7 @@ function AccordionList({ panels }) {
       {panels.map((panel) => (
         <AccordionItem
           key={panel.id}
-          id={panel.id} // ✅ ID necesario para el hash en el DOM
+          id={panel.id} 
           title={panel.title}
           onShow={() => handleShow(panel.id)}
           isActive={activeIndex === panel.id}

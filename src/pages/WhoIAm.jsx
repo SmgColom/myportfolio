@@ -35,7 +35,7 @@ const ContentWrapper = styled.div`
   align-items: center; 
   align-items: flex-start; 
   gap: 2rem;
-  flex-wrap: wrap; /* Para que sea responsive */
+  flex-wrap: wrap;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -80,53 +80,52 @@ function WhoIAmPage() {
   const [panels, setPanels] = useState([
     {
       id: "profile",  
-      title: "Your Partner in Digital Transformation!",
+      title: "Tu socio en la transformación digital!!",
       content:
-        "With 15+ years of experience in competitiveness, sustainability, and sales strategies, I help businesses leverage software development and web solutions to drive growth and innovation.<br/><br/>" +
-        "As a Productivity & Quality Engineer and Marketing Specialist, I combine cutting-edge technology, intuitive UX/UI design, and strategic innovation to create high-performance digital experiences tailored to your business needs.<br/><br/>" +
-        "I deliver solutions that:<br/>" +
-        "✅ Enhance customer engagement<br/>" +
-        "✅ Improve operational efficiency<br/>" +
-        "✅ Increase sales and conversions<br/><br/>" +
-        "Let's build a seamless digital experience for your company! Ready to take your business to the next level? Let's connect! 💡"
+        "Con 16 años de experiencia en estrategia de ventas, mercadeo y desarrollo de negocios, ayudo a las empresas a aprovechar el desarrollo de software y las soluciones web para impulsar el crecimiento y la innovación.<br/><br/>" +
+        "Como ingeniero de productividad y calidad  y especialista en marketing, combino tecnología de vanguardia, diseño UX/UI intuitivo, y estrategia de innovación para crear experiencias digitales de alto desempeño a la medida de las necesidades de tu negocio.<br/><br/>" +
+        "Entrego soluciones que:<br/>" +
+        "✅ Mejoran la interacción con el cliente<br/>" +
+        "✅ Incrementan la eficiencia operacional<br/>" +
+        "✅ Incrementan las ventas y conversiones<br/><br/>" +
+        "Vamos a crear una experiencia digital impecable para su empresa! Listo para llevar tu negocio al siguiente nivel? Conectémonos 💡"
     },
     {
       id: "education",
-      title: "My Educational Background",
+      title: "Mi formación profesional",
       content:
-        "I'm currently expanding my tech expertise at Holmesglen Institute, working towards a Diploma in Information Technology.<br/><br/>" +
-        "My journey started with an Engineering degree in Productivity and Quality at Politécnico Colombiano JIC, followed by a Postgraduate degree in Marketing at EAFIT University.<br/><br/>" +
-        "Recently, I earned a Certificate IV in Information Technology (Web Development), strengthening my skills in modern web technologies.<br/><br/>" +
-        "This blend of engineering, marketing, and tech empowers me to create innovative and high-performing digital solutions!"
+        "Soy desarrollador web fullstack del Instituto Holmesglen, Melbourne, Australia, con 3 años de experiencia en el mercado.<br/><br/>" +
+        "Mi camino empezó con una ingeniería en productividad y calidad en el Politécnico Colombiano JIC, seguido de un postgrado en Marketing en la universidad EAFIT.<br/><br/>" +
+        "Esta mezcla de ingeniería, mercadeo y tecnología me empoderan para crear  soluciones digitales innovadoras y de alto desempeño!"
     },
     {
       id: "passions",
-      title: "My Passions",
+      title: "Mis Pasiones",
       content:
-        "I'm all about energy, creativity, and constant growth! ⚡<br/><br/>" +
-        "Whether I'm playing or watching sports, I'm always up for the thrill of competition. 🏀⚽🎾<br/><br/>" +
-        "Web development is my playground, where I love building cool and functional digital experiences. 💻🎨<br/><br/>" +
-        "Music is my fuel, especially when it's blasting rock & roll—nothing beats the power of a killer riff! 🎸🔥<br/><br/>" +
-        "I'm also passionate about mastering English and expanding my knowledge every day. 🚀 Always curious, always learning!"
+        "¡Me apasiona la energía, la creatividad y el crecimiento constante! ⚡<br/><br/>" +
+        "Ya sea que esté practicando o viendo deportes, siempre estoy dispuesto a experimentar la emoción de la competición. 🏀⚽🎾<br/><br/>" +
+        "El desarrollo web es mi terreno de juego, donde me encanta crear experiencias digitales geniales y funcionales. 💻🎨<br/><br/>" +
+        "La música es mi combustible, especialmente cuando suena rock a todo volumen: ¡nada supera el poder de un riff demoledor!🎸🔥<br/><br/>" +
+        "También me apasiona dominar el inglés y ampliar mis conocimientos cada día.🚀 Siempre curioso, siempre aprendiendo!"
     }
   ]);
 
   return (
     <>
     <Helmet>
-      <title>About Santiago Montoya | Developer, Engineer & Innovator</title>
+      <title>Quien soy yo | Santiago Montoya | Desarrollador Ingeniero Mercadólogo</title>
       <meta
         name="description"
-        content="Get to know Santiago Montoya – a fullstack web developer with a background in engineering, marketing, and web development. Learn about his passions, education, and professional journey."
+        content="Conoce a Santiago Montoya, desarrollador web full-stack con experiencia en ingeniería, marketing y desarrollo web. Descubre sus pasiones, formación académica y trayectoria profesional."
       />
       <meta
         name="keywords"
-        content="Web Development Company, Web developer Melbourne, Colombian developer, personal story, background, fullstack engineer"
+        content="Empresa de desarrollo web, desarrollador web en Colombia, desarrollador Colombiano, historia personal, experiencia, ingeniero full-stack"
       />
       <link rel="canonical" href="https://santiagomontoya.com.au/whoiam" />
     </Helmet>
     <HeroSection>
-      <HeroTitle>Who I Am</HeroTitle>
+      <HeroTitle>Quién soy yo?</HeroTitle>
       <ContentWrapper>
         <LeftColumn>
           <Image src={ProfileImage} alt="Santiago Montoya profile image" />

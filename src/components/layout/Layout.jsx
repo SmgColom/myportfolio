@@ -5,9 +5,9 @@ import Header from "./Header";
 import Footer from "./Footer";
 import styled from "styled-components";
 import BGVideo2 from "../../assets/BGVideo2.mp4";
-import { useTheme } from "../../context/ThemeContext"; // ✅ import
+import { useTheme } from "../../context/ThemeContext"; 
 
-// ✅ Styled Components necesarios
+
 const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -49,8 +49,8 @@ const Layout = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === "/";
-  const { mode } = useTheme(); // ✅ theme context
-  const isLightMode = mode === "light"; // ✅ define modo claro
+  const { mode } = useTheme(); 
+  const isLightMode = mode === "light"; 
 
   return (
     <PageWrapper>
@@ -70,7 +70,7 @@ const Layout = () => {
         <Outlet />
       </AppContent>
 
-      <Footer isLightMode={isLightMode} /> {/* ✅ pasamos prop */}
+      <Footer isLightMode={isLightMode} /> 
     </PageWrapper>
   );
 };

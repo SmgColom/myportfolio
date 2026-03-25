@@ -5,8 +5,8 @@ import { IoLogoJavascript } from "react-icons/io";
 import { FaReact } from "react-icons/fa";
 import { FaNode } from "react-icons/fa6";
 import { FaHtml5 } from "react-icons/fa";
-import { MdCss } from "react-icons/md";
 import { SiStyledcomponents } from "react-icons/si";
+import { BsFiletypeScss } from "react-icons/bs";
 
 
 
@@ -82,19 +82,19 @@ export default function Section() {
       label: "HTML5",
     },
     {
-      icon: <MdCss />,
-      label: "CSS",
-    },
-    {
       icon: <SiStyledcomponents />,
       label: "Styled Components",
     },
+    {
+      icon: <BsFiletypeScss />,
+      label: "SCSS",
+    }
   ];
 
   return (
 
       <HeroSectionFour>
-        <HeroTitleFour>Technologies I Use for Modern Web Development</HeroTitleFour>
+        <HeroTitleFour>Tecnologias que uso en el desarrollo web </HeroTitleFour>
         <ValuesGrid role="list" aria-label="Technology tools I use">
           {values.map((value, index) => (
             <ValueCard key={index} role="listitem">

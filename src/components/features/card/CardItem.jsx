@@ -6,6 +6,7 @@ const CardWrapper = styled.div`
   padding:0;
   margin: 0 auto;
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -38,6 +39,8 @@ const CardImage = styled.img`
   margin-left: 1rem;
   flex: 1;
   width: 100%;
+  height: auto;
+  object-fit: contain;
   border-radius: 8px;
   object-fit: cover;
   max-height: 400px;
