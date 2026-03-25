@@ -166,7 +166,7 @@ const Header = ({ isExpanded, setIsExpanded }) => {
                 {mode === "dark" ? "🌙" : "☀️"}
               </ThemeButton>
             )}
-            <StyledNavLink as={Link} to="/" onClick={closeMenu}>Incio</StyledNavLink>
+            <StyledNavLink as={Link} to="/" onClick={closeMenu}>Inicio</StyledNavLink>
             <StyledNavLink as={Link} to="/WhoIAm" onClick={closeMenu}>Quién Soy Yo</StyledNavLink>
             <StyledNavLink as={Link} to="/projects" onClick={closeMenu}>Mis proyectos</StyledNavLink>
 
