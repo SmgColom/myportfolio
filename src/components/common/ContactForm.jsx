@@ -240,8 +240,8 @@ const GoogleForm = () => {
   return (
     <FullWidthWrapper>
         <Helmet>
-        <title>Contact Santiago Montoya | Fullstack Web Developer</title>
-        <meta name="description" content="Send Santiago a message about your next website or project. Based in Melbourne and Medellín." />
+        <title>Contáctame | Santiago Montoya | Desarrollador Fullstack</title>
+        <meta name="description" content="Envía un mensaje a Santiago Montoya para discutir tu próximo proyecto o sitio web. Ubicado en Medellín." />
         <link rel="canonical" href="https://santiagomontoya.com.au/ContactMe" />
       </Helmet>
       <Wrapper>

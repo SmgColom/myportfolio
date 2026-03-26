@@ -21,21 +21,27 @@ const FooterWrapper = styled.footer`
   a:hover {
     color: var(--text-hover);
   }
+
+  @media (max-width: 600px) {
+    padding: 2rem 1.2rem 1rem 1.2rem;
+  }
 `;
 
 const FooterTop = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  align-items: start;
+  width: 100%;
   margin-bottom: 2rem;
+  gap: 2rem;
 
- 
   & > :nth-child(1) {
     justify-self: start;
+    text-align: left;
   }
 
   & > :nth-child(2) {
     justify-self: center;
+    text-align: center;
   }
 
   & > :nth-child(3) {
@@ -46,6 +52,11 @@ const FooterTop = styled.div`
   @media (max-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
 
+    & > :nth-child(1) {
+      justify-self: start;
+      text-align: left;
+    }
+
     & > :nth-child(2) {
       justify-self: end;
       text-align: right;
@@ -54,21 +65,36 @@ const FooterTop = styled.div`
     & > :nth-child(3) {
       justify-self: start;
       text-align: left;
+      grid-column: 1 / -1;
+      margin-top: 0.5rem;
     }
   }
 
   @media (max-width: 600px) {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 2rem;
-    justify-self: center;
     text-align: center;
-    & > :nth-child(1) {width: 100%;
+
+    & > * {
+      width: 100%;
+      text-align: center;
+    }
+
+    & > :nth-child(1),
+    & > :nth-child(2),
+    & > :nth-child(3) {
+      justify-self: auto;
+      text-align: center;
+      margin-top: 0;
     }
   }
 `;
 
 const FooterSection = styled.div`
+  width: 100%;
+
   h4 {
     font-family: 'Work Sans', sans-serif; 
     font-size: 1.2rem;
@@ -82,6 +108,7 @@ const FooterSection = styled.div`
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
     text-decoration: none;
+    line-height: 1.5;
   }
 
   p {
@@ -89,24 +116,19 @@ const FooterSection = styled.div`
     display: block;
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
+    line-height: 1.5;
   }
 `;
 
 const FooterBottom = styled.div`
-  border-top: 1px solid #ffffff;
+  border-top: 1px solid ${({ $isLightMode }) => ($isLightMode ? "#232f45" : "#ffffff")};
   margin-top: 2rem;
-  margin-bottom: 1rem;
-  margin-right:  0rem;
   padding-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-
-  @media(min-width: 768px) {
-    flex-direction: row;
-    justify-content: space-between;
-  }
+  text-align: center;
 `;
 
 const SocialIcons = styled.div`
@@ -185,7 +207,7 @@ export default function Footer({ isLightMode }) {
 
       </FooterTop>
 
-      <FooterBottom>
+      <FooterBottom $isLightMode={shouldApplyLight}>
         <span>&copy; 2026 Santiago Montoya</span>
         <SocialIcons>
           <a   href="https://www.linkedin.com/in/santiagomontoyagomez" 
