@@ -9,6 +9,7 @@ import Fwd2 from "../../../assets/Fwd2.png";
 import Eurodollar from "../../../assets/Eurodollar.png";
 import Juva from "../../../assets/Juva.png";
 import Metric from "../../../assets/Metric.png";
+import Fencing from "../../../assets/Fencing.jpg";
 
 const projects = [
   {
@@ -51,7 +52,7 @@ const projects = [
         {
     title: "Landing Page Dinámica",
     description: "Landing page desarrollada para una empresa de servicios de limpieza en Melbourne, enfocada en conversión y experiencia de usuario. Incluye secciones de servicios, testimonios y contacto directo, con diseño responsive y optimización SEO para captación de clientes potenciales.",
-    image: Juva,
+    image: Fencing,
     links: [{ text: "Demo", url: "https://juva-fencing.vercel.app/" }],
   },
 
