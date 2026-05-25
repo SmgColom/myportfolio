@@ -35,18 +35,24 @@ const projects = [
     image: Eurodollar,
     links: [{ text: "Demo", url: "https://www.eurodollarcolombia.com/" }],
   },
-    {
-    title: "Landing Page Dinámica",
-    description: "Landing page desarrollada para una empresa de servicios de limpieza en Melbourne, enfocada en conversión y experiencia de usuario. Incluye secciones de servicios, testimonios y contacto directo, con diseño responsive y optimización SEO para captación de clientes potenciales.",
-    image: Juva,
-    links: [{ text: "Demo", url: "https://juva-cleaning.vercel.app/" }],
-  },
-
       {
     title: "Sitio Web Dinámico",
     description: "Una página web interactiva y flexible diseñada para mostrar contenido en tiempo real, adaptarse al comportamiento del usuario y mejorar la interacción. Ideal para plataformas que requieren la entrada de datos del usuario, actualizaciones de datos o experiencias personalizadas, como paneles de control, portales o aplicaciones web.",
     image: Metric,
     links: [{ text: "Demo", url: "https://metric-omega.vercel.app/" }],
+  },
+  {
+    title: "Landing Page Dinámica",
+    description: "Landing page desarrollada para una empresa de servicios de limpieza en Melbourne, enfocada en conversión y experiencia de usuario. Incluye secciones de servicios, testimonios y contacto directo, con diseño responsive y optimización SEO para captación de clientes potenciales.",
+    image: Juva,
+    links: [{ text: "Demo", url: "https://juvacleaning.com.au/" }],
+  },
+
+        {
+    title: "Landing Page Dinámica",
+    description: "Landing page desarrollada para una empresa de servicios de limpieza en Melbourne, enfocada en conversión y experiencia de usuario. Incluye secciones de servicios, testimonios y contacto directo, con diseño responsive y optimización SEO para captación de clientes potenciales.",
+    image: Juva,
+    links: [{ text: "Demo", url: "https://juva-fencing.vercel.app/" }],
   },
 
 ];
